@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 50px;
+    border: 2px solid black;
+    box-shadow: 0 30px 34px 0 rgba(0, 0, 0, 0.2), 0 30px 40px 0 rgba(0, 0, 0, 0.19);
+}
+.left{
+    display: flex;
+    flex: 0.30;
+    background-color: #323b4c;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-right: 2px solid black;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+}
+.pic{
+    padding: 20px;
+}
+h3{
+    font-size: 2rem;
+}
+.border{
+    border-top: 2px solid white;
+    width: 300px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.margin{
+    margin: 33px 5px;
+}
+.interest{
+    margin-bottom: 20px;
+}
+
+
+.right{
+display: flex;
+background-color: white;
+flex: 0.70;
+flex-direction: column;
+
+
+}
+.marginleft{
+    margin-left: 50px;
+}
+.name{
+    margin-top: 50px;
+    
+    font-size: 1.5rem;
+}
+.obj{
+    margin-top: 20px;
+    /* margin-bottom: 50px; */
+    
+}
+.obj > h4{
+    font-size: 30px;
+}
+
+.experties > h4{
+    font-size: 30px;
+}
+.project > h4{
+    font-size: 30px;
+}
+h5{
+    margin: 8px 0px;
+    font-size: 16px;
+}
+.reference > h4{
+    font-size: 30px;
+}
+.leftright{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+}
+
+.reference1{
+    flex: 0.5;
+    
+    margin: 20px 0px;
+}
+.reference2{
+    flex: 0.5;
+    
+    margin: 20px;
+}
