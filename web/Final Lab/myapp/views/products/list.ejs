@@ -1,0 +1,83 @@
+<h1>list of products</h1>
+
+<div class="row">
+    <div class="col-sm-8">
+        <h1><%= title %></h1>
+    </div>
+    <div class="col-sm-4">
+        <a href="/products/add" class="btn btn-primary pull-right float-right">Add Product</a>
+    </div>
+</div>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>About</th>
+        <th>Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(function(product) { %>
+        <tr>
+          <td><img src="<%= product.image %>" alt="Picture"></td>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td><%= product.about %></td>
+          
+          <td>
+            <a href="/products/edit/<%= product._id %>" class="btn btn-warning">Edit</a>
+            <a href="/products/delete/<%= product._id %>", class="btn btn-danger">Delete</a>
+            <a href="/products/cart/<%= product._id %>", class="btn btn-success">Add to Cart</a>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <% products.forEach(function(product) { %>
+    <div class="d-flex flex-row mb-3">
+        <div class="card my-4" style="width: 18rem;">
+            <img src="<%= product.image %>" alt="Picture" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <h5 class="card-title"><%= product.price %></h5>
+              <p class="card-text"><%= product.about %></p>
+              <a href="/products/edit/<%= product._id %>" class="btn btn-warning">Edit</a>
+            <a href="/products/delete/<%= product._id %>", class="btn btn-danger">Delete</a>
+            <a href="/products/cart/<%= product._id %>", class="btn btn-success">Add to Cart</a>
+            </div>
+          </div>
+    </div>
+  
+  <% }); %>
+  <!-- <div class="d-flex flex-row flex-wrap">
+    <% products.forEach(function(product) { %>
+      <div class="card my-4 mx-3" style="width: 18rem;">
+        <img src="<%= product.image %>" alt="Picture" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %></h5>
+          <h5 class="card-title"><%= product.price %></h5>
+          <p class="card-text"><%= product.about %></p>
+          <a href="/products/edit/<%= product._id %>" class="btn btn-warning">Edit</a>
+          <a href="/products/delete/<%= product._id %>" class="btn btn-danger">Delete</a>
+          <a href="/products/cart/<%= product._id %>" class="btn btn-success">Add to Cart</a>
+        </div>
+      </div>
+    <% }); %>
+  </div> -->
+  

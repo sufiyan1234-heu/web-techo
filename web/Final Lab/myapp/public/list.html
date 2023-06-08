@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Client</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Records</h1>
+  <ul id="recordList"></ul>
+
+  <script>
+    $(document).ready(function() {
+      // Function to display all records
+      function displayRecords() {
+        // Clear the existing list
+        $('#recordList').empty();
+
+        // Make GET request to the API endpoint to fetch all records
+        $.get('products/api/products', function(data) {
+          // Process the response data and update the UI
+          var records = data;
+          var recordList = $('#recordList');
+          records.forEach(function(record) {
+            recordList.append('<li>' + record.title + '</li>');
+          });
+        });
+      }
+
+      // Initial display of records
+      displayRecords();
+
+      // Handle form submission for creating a new record
+      $('#createRecordForm').submit(function(event) {
+        event.preventDefault();
+
+        // Get the input value
+        var name = $('#recordName').val();
+
+        // Make POST request to the API endpoint to create a new record
+        $.post('/api/records', { name: name }, function(data) {
+          // Clear the input field
+          $('#recordName').val('');
+
+          // Refresh the records list
+          displayRecords();
+        });
+      });
+
+      // Handle form submission for updating a record
+      $('#updateRecordForm').submit(function(event) {
+        event.preventDefault();
+
+        // Get the input values
+        var id = $('#recordId').val();
+        var name = $('#recordNewName').val();
+
+        // Make PUT request to the API endpoint to update the record
+        $.ajax({
+          url: '/api/records/' + id,
+          method: 'PUT',
+          data: { name: name },
+          success: function(data) {
+            // Clear the input fields
+            $('#recordId').val('');
+            $('#recordNewName').val('');
+
+            // Refresh the records list
+            displayRecords();
+          },
+          error: function(error) {
+            console.log('Error:', error);
+          }
+        });
+      });
+
+      // Handle form submission for deleting a record
+      $('#deleteRecordForm').submit(function(event) {
+        event.preventDefault();
+
+        // Get the input value
+        var id = $('#recordIdToDelete').val();
+
+        // Make DELETE request to the API endpoint to delete the record
+        $.ajax({
+          url: '/api/records/' + id,
+          method: 'DELETE',
+          success: function(data) {
+            // Clear the input field
+            $('#recordIdToDelete').val('');
+
+            // Refresh the records list
+            displayRecords();
+          },
+          error: function(error) {
+            console.log('Error:', error);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

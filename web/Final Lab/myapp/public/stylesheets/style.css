@@ -1,0 +1,13 @@
+h1{
+  
+  color: blue;
+}
+
+ul  li{
+  display: inline;
+}
+
+td img{
+  height: 50px;
+  width: 50px;
+}
