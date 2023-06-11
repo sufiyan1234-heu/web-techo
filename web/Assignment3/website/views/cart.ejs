@@ -1,0 +1,49 @@
+<center><h1 style="font-size: xx-large; margin: 30px;">Shopping Cart</h1></center>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% let total=0 %>
+            <% cart.forEach(elem=> { %>
+                <% total +=Number(elem.price)%>
+                    <tr>
+                        <td>
+                            <img src="<%=elem.image %>" alt="" srcset="" style="height: 200px;width: 250px;">
+                        </td>
+                        <td>
+                            <%=elem.title %>
+                        </td>
+                        <td>
+                            <%=elem.price %>
+                        </td>
+                        <td>
+                            <a class="btn add-button" href="/cart/remove/<%=elem._id%>">Delete</a>
+                        </td>
+                    </tr>
+                    
+
+                    <% }) %>
+                    
+    <tfoot>
+        
+        <tr>
+            <td>Total</td>
+            <td>
+                <%=total%>
+            </td>
+        </tr>
+    </tfoot>
+
+
+
+
+    </tbody>
+</table>
+

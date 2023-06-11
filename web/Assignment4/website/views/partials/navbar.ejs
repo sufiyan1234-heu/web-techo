@@ -1,0 +1,50 @@
+<!--------- header section start ------------>
+<header class="header">
+    <div class="header_one">
+        <a href="" class="logo"><i class="fas fa-book"> Bookly</i></a>
+
+        <form action="" class="search-form">
+            <input id="search-box" type="search" placeholder="search here...">
+            <label for="" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="/like" class="fas fa-heart"></a>
+            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <div id="login-btn" class="fas fa-user"><a href="/login"></a></div>
+        </div>
+    </div>
+
+    <!----- navigation bar -------->
+    <div class="header_two">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="#featured">Featured</a>
+            <a href="#arrivals">Arrivals</a>
+            <a href="#reviews">Reviews</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/books">Books</a>
+            <% if (!user) {%>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <% } %>
+            <% if (user) {%>
+            <a href="/logout">Logout</a>
+            
+            <% } %>
+               
+                       
+        </div>
+    </div>
+
+</header>
+
+<!-------- bottom navbar start ----------->
+<div class="bottom-navbar">
+    <a href="/" class="fas fa-home"></a>
+    <a href="#featured" class="fas fa-list"></a>
+    <a href="#arrivals" class="fas fa-tags"></a>
+    <a href="/cart" class="fas fa-app-store"></a>
+    <a href="/books" class="fas fa-book"></a>
+</div>

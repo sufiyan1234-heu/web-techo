@@ -1,0 +1,35 @@
+<!-- <div class="container">
+  <form action="/add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="title">Book Title</label>
+      <input type="text" id="title" class="form-control" placeholder="Enter Book Title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" class="form-control" placeholder="Enter Book Price" name="price" required>
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="file" id="image" class="form-control" name="image" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> -->
+
+<div class="add-container">
+
+  <form action="/add" method="post" enctype="multipart/form-data">
+      <h3 class="add-h3">Add Book</h3>
+      <span class="span-h3">Title of Book</span>
+      <input type="text" class="add-box" placeholder="enter Book Title" name="title">
+      <span>Price</span>
+      <input type="number" class="add-box" placeholder="enter price" name="price">
+
+      <div class="add-form-group">
+      <label for="image">Image</label>
+      <input type="file" id="image" class="add-form-control" name="image" required>
+    </div>
+      <input type="submit" value="Add book" class="btn-add">
+
+  </form>
+</div>

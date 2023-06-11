@@ -1,0 +1,33 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+  }
+
+  body{
+    background-image: url("/images/about.png");
+    background-repeat: no-repeat;
+ 
+  background-position: center;
+  }
+  .border{
+    border: 2rem solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ .field{
+    width:400px
+ }
+ 
+.error{
+border: 4px solid red;
+}
+.success{
+    border: 4px solid green;
+}
+  

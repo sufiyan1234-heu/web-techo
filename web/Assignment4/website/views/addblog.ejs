@@ -1,0 +1,20 @@
+<title>Add Blog</title>
+</head>
+<body>
+  <header style="font-size: xx-large; text-align: center;">
+    <h1>Add Blog</h1>
+  </header>
+  <main style="text-align: center; margin-top: 50px;">
+    <form method="POST" action="/blogadd" style="display: inline-block; text-align: left; padding: 20px; border: 1px solid #ccc; border-radius: 5px; width: 400px; background-color: #f2f2f2;">
+      <div style="margin-bottom: 20px;">
+        <label for="title" style="font-size: large ;font-weight: bold; display: block; margin-bottom: 5px;">Title:</label>
+        <input type="text" id="title" name="title" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px;">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="content" style="font-size: large ; font-weight: bold; display: block; margin-bottom: 5px;">Content:</label>
+        <textarea id="content" name="blog" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-add" ">Add Blog</button>
+    </form>
+  </main>
+  

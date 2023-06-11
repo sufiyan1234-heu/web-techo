@@ -1,0 +1,37 @@
+
+
+
+  <div style=" margin-top:50px; margin-left:auto; margin-right:auto; text-align: center; border:2px solid black; border-radius: 10px; height: 500px;width: 500px; align-items: center;">
+    <h1>Register</h1>
+    <form action="/register" , method="post">
+        <div class="form-group">
+            <label for="name"  style="display: block; font-weight: bold;font-size: larger; margin-bottom: 10px;">Name</label>
+            <input type="text" class="form-control"  style="width: 50%; padding: 0.5rem;" name="name" aria-describedby="emailHelp" placeholder="Enter Email">
+          </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="email" style="display: block; font-weight: bold;font-size: larger; margin-bottom: 10px;">Email</label>
+            <input type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter Email"
+                style="width: 50%; padding: 0.5rem;" required>
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="password" style="display: block; font-weight: bold; font-size: larger; margin-bottom: 10px;">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Enter Password"
+                style="width: 50%; padding: 0.5rem;" required>
+        </div>
+        <button type="submit" class="btn btn-add"
+            style="background-color: #007bff; color: white; padding: 0.5rem 1rem; border: none; cursor: pointer;">Register</button>
+    </form>
+</div>
+
+<button id="registerBtn" class="btn">Register</button>
+
+<div id="popupMenu" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h3>Register Form</h3>
+    <form action="/register" method="post">
+      <!-- Your registration form fields here -->
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+</div>

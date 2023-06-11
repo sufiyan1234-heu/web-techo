@@ -1,0 +1,40 @@
+
+  <section class="featured" id="featured">
+    <div class="heading">
+      <h1 style="font-size: xx-large;">Featured book</h1>
+    </div>
+    <div class="heading">
+      <a href="/add" class="btn add-button">Add new Book</a>
+    </div>
+  
+    <div class="featured-slider">
+      <div class="book-row">
+        <% books.forEach(function(book) { %>
+        <div class="book-column">
+          <div class="box">
+            <div class="icons">
+              <a href="" class="fas fa-search"></a>
+              <a href="/like/<%= book._id %>" class="fas fa-heart"></a>
+              <a href="" class="fas fa-eye"></a>
+              <a href="/delete/<%= book._id %>" class="btn delete-button">Delete</a>
+              <a href="/edit/<%= book._id %>" class="btn edit-button">Edit</a>
+            </div>
+  
+            <div class="image">
+              <img src="<%= book.image %>" alt="">
+            </div>
+  
+            <div class="content">
+              <h3><%= book.title %></h3>
+              <div class="price"><%= book.price %> <span>$20.99</span></div>
+              <a href="/cart/<%= book._id %>" class="btn">Add to cart</a>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+
+ 

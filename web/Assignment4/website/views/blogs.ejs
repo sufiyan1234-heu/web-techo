@@ -1,0 +1,21 @@
+<header style="font-size: xx-large; text-align: center; margin: 50px;">
+    <a href="/blogadd" class="btn">Add Blog</a>
+  </header>
+  
+  <main>
+    <h1 style="font-size: xx-large; text-align: center;">Blog</h1>
+    
+    <% blogs.forEach(function(blog) { %>
+    <div class="blog-entry" style="border: 2px solid black; border-radius: 10px; margin: 20px;">
+      <h2 style="font-size: xx-large; margin: 30px;"><%= blog.title %></h2>
+      <p style="font-size: medium; margin: 30px;"><%= blog.blog %></p>
+      <div class="actions">
+        <a href="/blogs/edit/<%= blog._id %>" class="btn edit-button" style="font-size: medium; margin: 30px;">Edit</a>
+        <a href="/blogs/delete/<%= blog._id %>" class="btn edit-button" style="font-size: medium; margin: 30px;">Delete</a>
+  
+       
+        
+      </div>
+    </div>
+    <% }); %>
+  </main>

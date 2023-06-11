@@ -1,0 +1,23 @@
+
+
+<body>
+  <header style="font-size: xx-large; text-align: center;">
+    <h1>Update Book</h1>
+  </header>
+  <main style="text-align: center; margin-top: 50px;">
+    <form method="POST" action="/edit/<%=book._id%>" style="display: inline-block; text-align: left; padding: 20px; border: 1px solid #ccc; border-radius: 5px; width: 400px; background-color: #f2f2f2;">
+      <div style="margin-bottom: 20px;">
+        <label for="title" style="font-size: large ;font-weight: bold; display: block; margin-bottom: 5px;">Title:</label>
+        <input type="text" id="title" name="title" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px;" value="<%=book.title%>">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="price" style="font-size: large ; font-weight: bold; display: block; margin-bottom: 5px;">Price:</label>
+        <input type="number" id="price" name="price" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 3px;" value="<%=book.price%>">
+      </div>
+      <div class="add-form-group" style="margin: 24px;">
+        <label for="image">Image</label>
+        <input type="file" id="image" class="add-form-control" name="image" required value="<%=book.image%>">
+      </div>
+      <button type="submit" class="btn btn-add" ">Update Book</button>
+    </form>
+  </main>
